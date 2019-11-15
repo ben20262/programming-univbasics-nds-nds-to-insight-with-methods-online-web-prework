@@ -8,11 +8,12 @@ require_relative 'directors_database'
 def directors_totals(nds)
   result = {}
   nds.each do |direct|
+    name = direct[:name]
     total = 0
     direct[:movies].each do |movie|
       total += movie[:worldwide_gross]
     end
-    result[direct[:name]] = total
+    result[name] = total
   end
   result
 end
