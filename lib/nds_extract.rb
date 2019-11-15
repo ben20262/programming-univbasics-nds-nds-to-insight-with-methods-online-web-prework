@@ -12,7 +12,7 @@ def directors_totals(nds)
     direct[:movies].each do |movie|
       total += movie[:worldwide_gross]
     end
-    result[direct] = total
+    result[direct[:name]] = total
   end
   result
 end
